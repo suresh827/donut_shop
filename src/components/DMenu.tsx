@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import Donut from "../models/Donut";
 import { getDonutMenu } from "../service/DonutService";
 import "./DMenu.css";
@@ -14,6 +15,7 @@ const DMenu = () => {
   });
   return (
     <div className="DMenu">
+      <Link to="donut/cart">Show Cart</Link>
       <ul>
         {donuts.map((donut) => (
           <DonutList donut={donut} key={donut.id} />
